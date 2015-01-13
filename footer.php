@@ -7,7 +7,7 @@
 	<hr/>
 <?php
 	echo '<a href="'.$config["url"].'">(c) '.$config["etablissement"].'</a><br>';
-	echo 'Powered by <a href="https://github.com/bb2k/bourse">AquaBourse</a>';
+	echo 'Powered by <a href="https://github.com/bb2k/AquaBourse">AquaBourse</a>';
 ?>
 </div>
 </body>
