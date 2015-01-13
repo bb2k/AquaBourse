@@ -1,2 +1,11 @@
-# bourse
+# AqueBourse
 Logiciel d'organisation d'une bourse aquariophile
+
+# Installation
+- Copier l'ensemble des fichiers dans un répertoire
+- Renommer le fichier config/config.php.ini en config/config.php
+- Importer le fichier sql/bourse.sql dans une base de données
+
+# Configuration
+- modifier le fichier config/config.php
+- modifier le logo et l'affiche se trouveant dans le dossier images
