@@ -1,5 +1,5 @@
 <?php
-include_once('../includes/config.php');
+include_once('../config/config.php');
 
 //For security reasons, don't display any errors or warnings. Comment out in DEV.
 error_reporting(0);

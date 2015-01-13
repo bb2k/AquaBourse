@@ -1,5 +1,5 @@
 <?php
-include "includes/config.php";
+include "config/config.php";
 include "header.php";
 include "includes/formInscr.php";
 include("includes/class.login.php");
@@ -9,12 +9,7 @@ $log->encrypt = true; //set encryption
 //parameters are(SESSION, name of the table, name of the password field, name of the username field)
 if($log->logincheck($_SESSION['loggedin'], "exposant", "Password", "Mail") == false){
     //do something if NOT logged in. For example, redirect to login page or display message.
-
-	echo ('<div class="page">');
-
-	displayLoginForm();
-
-	echo '</div>	';
+	header('Location:'.$config["url"].'index.php');
 } else {
 
 	if (isset($_POST["action"])) {

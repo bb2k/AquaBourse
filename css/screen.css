@@ -31,19 +31,31 @@ A:active
 hr {margin-bottom:10px;}
 h2 {font-size:14px;}
 input { border:1px solid grey; width:200px;}
-.page { width:1024px; height:764px;background-image:url(page_login.jpg); background-repeat :no-repeat; margin:auto; text-align:left;}
+
+.error{ color:#d01919;}
+
+.affiche { margin: 100px 0 0 0px; position:absolute; width=400px;}
+.logo { margin: -124px 0px 0px 260px; width=140px;}
+.page { width:1024px; height:764px;background-image:url(../images/page_login.jpg); background-repeat :no-repeat; margin:auto; text-align:left;}
+
 .loginform { margin: 270px 0 0 550px; position:absolute;}
 .connexion{ width:100px; border:1px solid black; background-color:White; font-size:12px;}
 .password { margin-top:10px;}
 .identification { margin-bottom:20px; font-family: Arial; font-weight:bold;}
 
 .page_inscription { width:1024px; margin:auto; text-align:left;}
-.inscription {width:1024px;  background-image:url(fond_repeat.png); background-repeat:repeat-y;} 
-.content_inscription {width:900px;margin-left:70px;}
-.inscription_header {background-image:url(fond_up.png); height:160px;}
+.inscription_header {background-image:url(../images/fond_up.png); height:160px;}
+.inscription {width:1024px;  background-image:url(../images/fond_repeat.png); background-repeat:repeat-y;} 
+.inscription_footer {background-image:url(../images/fond_bottom.png); height:160px;}
+
+.content_inscription {width:900px;margin:auto;}
+
 .txt_inscription_1 {width:100px; display:inline-block; margin-bottom:5px;}
-.civil_gauche {width:300px; float:left;}
-.civil_droite { width:300px; margin-left:350px;}
+.civil_gauche { width:300px; float:left;}
+.civil_droite { width:300px; float:right;}
+
+
+
 .clear {clear:both;}
 .radio {width:10px; text-align:center; border:0;}
 .taille {width:80px;}
@@ -51,7 +63,6 @@ input { border:1px solid grey; width:200px;}
 .qte {width:80px;}
 .footer {margin:auto;}
 .ajouter{ width:100px; border:1px solid black; background-color:White; font-size:12px; margin-top:5px;}
-.inscription_footer {background-image:url(fond_bottom.png); height:160px;}
 .renseignement { width:450px;}
 .reglement { border:0; width:15px;}
 .reglement_page { border:0; width:900px;}
@@ -62,7 +73,9 @@ input { border:1px solid grey; width:200px;}
 
 table {
  border-collapse:collapse;
-  border:1px solid black;
+ border:1px solid black;
+ width:100%;
+ font-size:12px;
  }
 th, td {
  border:1px solid black;

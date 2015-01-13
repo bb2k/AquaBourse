@@ -1,12 +1,18 @@
 <?php
-include_once('includes/config.php');
+include_once('config/config.php');
 include_once('header.php');
 include_once("includes/class.login.php");
 
 echo '<div class="page">';
-echo '	<div class="loginform">';
 
-	echo '<h2 class="identification">Mot de passe oublié</h2><br/>';
+echo '<div class="affiche">';
+echo '<img src=images/affiche.jpg width=400>';
+echo '</div>';
+
+echo '<div class="loginform">';
+echo '<div class="logo"><img src="images/logo.png" width=140></div>';
+
+	echo '<br/><h2 class="identification">Mot de passe oublié</h2><br/>';
 	
         $log = new logmein();
         $log->encrypt = true; //set encryption

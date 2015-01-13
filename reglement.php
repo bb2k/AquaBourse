@@ -1,9 +1,13 @@
 <?php
 
-	include_once('includes/config.php');
+	include_once('config/config.php');
 	include_once('header.php');
 ?>
 <div class="page_inscription">
+<div class="inscription_header"></div>
+<div class="inscription">
+<div class="content_inscription">
+
 	<li>Les organisateurs mettent à disposition des exposants un espace pour la vente de poissons, plantes, coraux, crustacés etc...
 Seront fournis aux exposants des aquariums remplis d'eau du robinet, aérés et chauffés (26°C).
 Les bacs seront installés la veille de la bourse. Les vendeurs devront apporter leur propre chauffage, leur(s) épuisette(s) et leur(s)
@@ -33,6 +37,13 @@ s’engage à accepter la présence éventuelle d’un élève à ses côtés lo
 <li>Chaque exposant devra, le jour de la bourse, remettre un exemplaire signé de ce règlement aux organisateurs.
 Nous vous souhaitons à tous une très bonne journée !!!!!!</li>
 </div>
+</div>
+  <div class="inscription_footer">
+        </div>
+</div>
+</div>
+
+
 <?php
 	include_once('footer.php');
 ?>

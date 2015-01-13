@@ -1,7 +1,7 @@
 <?php
 include_once("header.php");
 include_once("class.login.php");
-include_once("../includes/config.php");
+include_once("../config/config.php");
 
 
 function displayLogin(){
@@ -43,7 +43,7 @@ if($log->logincheck($_SESSION['loggedinadmin'], "users", "Password", "Mail") == 
 	echo '<H2 class="identification">Administration</H2><br/>';
         echo '<li><a href="liste_exposants.php">Liste des exposants</a><br/></li>';
         echo '<li><a href="liste_poissons.php">Liste des poissons</a><br/></li>';
-        echo "<lI><a href='".$config["Url"]."admin/logout.php'>Me deconnecter</a><br/></li>";
+        echo "<lI><a href='".$config["url"]."admin/logout.php'>Me deconnecter</a><br/></li>";
         echo '</div>';
 }
 

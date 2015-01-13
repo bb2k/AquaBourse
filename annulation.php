@@ -1,5 +1,5 @@
 <?php
-include_once('includes/config.php');
+include_once('config/config.php');
 include_once('header.php');
 include_once("includes/class.login.php");
 

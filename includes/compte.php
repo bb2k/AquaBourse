@@ -1,21 +1,17 @@
 <?php
-require_once('includes/config.php');
+require_once('config/config.php');
 
-function displayLoginForm(){
-	?>
-	        <div class="loginform">
-        <?php
+function displayLoginForm($message=''){
+
+	echo '<p class="error">'.$message.'</p><br>';
 	echo '<h2 class="identification">Identification</h2>';
         $log = new logmein();
         $log->encrypt = true; //set encryption
         //parameters here are (form name, form id and form action)
         $log->loginform("login", "loginformid", "index.php");
-?>
-        <br/><br/>
-        Pas inscrit ? <strong><a href="inscription.php">formulaire d'inscription</a></strong>
-        <br>J'ai oublié mon <a href="reset.php">mot de passe </a>
-        </div>
-<?php
+        echo '<br/><br/>';
+        echo 'Pas inscrit ? <strong><a href="inscription.php">formulaire d\'inscription</a></strong>';
+        echo '<br>J\'ai oublié mon <a href="reset.php">mot de passe </a>';
 }
 
 
@@ -63,14 +59,14 @@ function envoiMailModification($recipient, $pass){
         
 
         // Envoi d'un mail de confirmation
-        $Name = $config["mail_name"] ; //senders name
+        $Name = $config["etablissement"] ; //senders name
         $email = $config["mail_from"]; //senders e-mail adress
         $mail_body = "
         <html><body>
         Bonjour,<br/>
         Vous avez demandé à modifier votre inscription à la bourse annuelle du Club Rennais Aquariophile.<br/>
         Merci de confirmer cette modification en cliquant sur le lien ci dessous ou en le copiant dans la barre d'adresse de votre navigateur.<br/>
-                <a href=".$config["Url"]."validation.php?hash=$pass>".$config["Url"]."/validation.php?hash=$pass</a></br>
+                <a href=".$config["url"]."validation.php?hash=$pass>".$config["url"]."/validation.php?hash=$pass</a></br>
         Votre identifiant est : $recipient<br/>
         Cordialement,<br/><br/>
         Le Webmaster<br/>
@@ -90,14 +86,14 @@ function envoiMailValidation($recipient, $pass){
 	$hash = md5($pass);
 
         // Envoi d'un mail de confirmation
-        $Name = $config["mail_name"] ; //senders name
+        $Name = $config["etablissement"] ; //senders name
         $email = $config["mail_from"]; //senders e-mail adress
         $mail_body = "
 	<html><body>
 	Bonjour,<br/>
 	Vous avez demandé à vous inscrite à la bourse annuelle du Club Rennais Aquariophile.<br/>
 	Merci de confirmer cette inscription en cliquant sur le lien ci dessous ou en le copiant dans la barre d'adresse de votre navigateur.<br/>
-		<a href=".$config["Url"]."/validation.php?hash=$hash>".$config["Url"]."validation.php?hash=$hash</a></br>
+		<a href=".$config["url"]."/validation.php?hash=$hash>".$config["url"]."validation.php?hash=$hash</a></br>
 	Votre identifiant est : $recipient<br/>
 	Votre mot de passe : $pass<br/>
 	Cordialement,<br/><br/>

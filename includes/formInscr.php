@@ -9,7 +9,7 @@
  *
  */
 
-require_once('includes/config.php');
+require_once('config/config.php');
 require_once('includes/compte.php');
 
 /*
@@ -468,7 +468,9 @@ function affiche_form($values = array(), $action='inscription') {
         </script>
 
 <div class="page_inscription">
-<div class="inscription_header"></div>
+<div class="inscription_header">
+<img align=right src="images/logo.png" width=140>
+</div>
 <div class="inscription">
 <div class="content_inscription">
 	<form action="<?php echo("$action")?>.php" name="Form" method="post" onSubmit="return check();">
