@@ -9,3 +9,8 @@ Logiciel d'organisation d'une bourse aquariophile
 ## Configuration
 - modifier le fichier config/config.php
 - modifier le logo et l'affiche se trouveant dans le dossier images
+
+## TODO
+ - page d'administration
+ - changement du mot de passe d'admin
+ - gestion de templatesde pages
